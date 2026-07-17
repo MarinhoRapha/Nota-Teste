@@ -261,6 +261,7 @@ td small {
   padding: 10px 12px;
   font-weight: 700;
   text-align: center;
+  border-top: 0.3px solid #9ca3af;
 }
 
 footer {
