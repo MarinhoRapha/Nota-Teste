@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido / Nota de Produtos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="documento">
+    <header class="cabecalho">
+      <section class="empresa">
+        <div class="logo">WCT</div>
+        <div>
+          <h1>WALCENTER</h1>
+          <p>CNPJ: 12.345.678/9001-01</p>
+          <p>Rua 24 de Fevereiro, 163 - Bonsucesso, Rio de Janeiro - RJ, 21040-300</p>
+          <p>Telefone: (21) 1234-5678 | contato@walcenter.com.br</p>
+        </div>
+      </section>
+
+      <section class="pedido-box">
+        <strong>PEDIDO</strong>
+        <span class="numero">000001</span>
+        <small>Data: 17/07/2026</small>
+      </section>
+    </header>
+
+    <section class="bloco dados">
+      <div>
+        <span class="rotulo">CLIENTE</span>
+        <strong>FULANO LTDA</strong>
+        <p>CNPJ/CPF: 98.765.432/0001-01</p>
+        <p>Endereço: Rua do Fulano, 456 - Bairro - Cidade/UF</p>
+      </div>
+      <div>
+        <span class="rotulo">VENDEDOR</span>
+        <strong>Ciclano</strong>
+        <p>Forma de pagamento: 30 dias</p>
+        <p>Transporte: Próprio</p>
+      </div>
+    </section>
+
+    <section class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Código</th>
+            <th>Produto / Descrição</th>
+            <th>Qtd.</th>
+            <th>Un.</th>
+            <th>Valor unit.</th>
+            <th>Valor total</th>
+          </tr>
+        </thead>
+        <tbody id="itens">
+          <tr>
+            <td>01</td>
+            <td>PRD001</td>
+            <td><strong>Cabo elétrico flexível 2,5 mm</strong><br><small>Rolo com 100 metros - cor azul</small></td>
+            <td>2</td>
+            <td>RL</td>
+            <td>R$ 189,90</td>
+            <td>R$ 379,80</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>PRD002</td>
+            <td><strong>Disjuntor bipolar 32 A</strong><br><small>Curva C - padrão DIN</small></td>
+            <td>4</td>
+            <td>UN</td>
+            <td>R$ 42,50</td>
+            <td>R$ 170,00</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>PRD003</td>
+            <td><strong>Tomada 2P+T 20 A</strong><br><small>Modelo modular - cor branca</small></td>
+            <td>10</td>
+            <td>UN</td>
+            <td>R$ 18,90</td>
+            <td>R$ 189,00</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>PRD004</td>
+            <td><strong>Luminária LED 36 W</strong><br><small>Sobrepor - luz branca fria</small></td>
+            <td>6</td>
+            <td>UN</td>
+            <td>R$ 74,90</td>
+            <td>R$ 449,40</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>PRD005</td>
+            <td><strong>Caixa de passagem 4x4</strong><br><small>PVC antichama - embutir</small></td>
+            <td>12</td>
+            <td>UN</td>
+            <td>R$ 9,50</td>
+            <td>R$ 114,00</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td>PRD006</td>
+            <td><strong>Fita isolante profissional</strong><br><small>19 mm x 20 m - preta</small></td>
+            <td>8</td>
+            <td>UN</td>
+            <td>R$ 14,90</td>
+            <td>R$ 119,20</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="resumo">
+      <div class="observacoes">
+        <span class="rotulo">OBSERVAÇÕES</span>
+        <p>Documento de Teste.</p>
+        <p>Prazo de entrega estimado: X dias úteis.</p>
+      </div>
+      <div class="totais">
+        <div><span>Subtotal</span><strong>R$ 1.421,40</strong></div>
+        <div><span>Frete</span><strong>R$ 0,00</strong></div>
+        <div class="total-geral"><span>Total geral</span><strong>R$ 1.421,40</strong></div>
+      </div>
+    </section>
+
+    <section class="galeria">
+      <div class="galeria-titulo">
+        <div>
+          <span class="rotulo">IMAGENS DOS PRODUTOS</span>
+          <h2>Galeria</h2>
+        </div>
+        <div class="controles">
+          <button id="anterior" aria-label="Imagem anterior">&#10094;</button>
+          <button id="proximo" aria-label="Próxima imagem">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="carrossel" id="carrossel">
+        <article class="slide">
+          <img src="img/produto-1.jpg" alt="Produto 1" onerror="this.src='https://placehold.co/800x500?text=Produto+1'">
+          <p>Produto 1</p>
+        </article>
+        <article class="slide">
+          <img src="img/produto-2.jpg" alt="Produto 2" onerror="this.src='https://placehold.co/800x500?text=Produto+2'">
+          <p>Produto 2</p>
+        </article>
+        <article class="slide">
+          <img src="img/produto-3.jpg" alt="Produto 3" onerror="this.src='https://placehold.co/800x500?text=Produto+3'">
+          <p>Produto 3</p>
+        </article>
+        <article class="slide">
+          <img src="img/produto-4.jpg" alt="Produto 4" onerror="this.src='https://placehold.co/800x500?text=Produto+4'">
+          <p>Produto 4</p>
+        </article>
+        <article class="slide">
+          <img src="img/produto-5.jpg" alt="Produto 5" onerror="this.src='https://placehold.co/800x500?text=Produto+5'">
+          <p>Produto 5</p>
+        </article>
+        <article class="slide">
+          <img src="img/produto-6.jpg" alt="Produto 6" onerror="this.src='https://placehold.co/800x500?text=Produto+6'">
+          <p>Produto 6</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Teste de Nota
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
