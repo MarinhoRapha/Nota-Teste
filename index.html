@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pedido / Nota de Produtos</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="documento">
@@ -13,16 +13,15 @@
         <div class="logo">WCT</div>
         <div>
           <h1>WALCENTER</h1>
-          <p>CNPJ: 12.345.678/9001-01</p>
-          <p>Rua 24 de Fevereiro, 163 - Bonsucesso, Rio de Janeiro - RJ, 21040-300</p>
-          <p>Telefone: (21) 1234-5678 | contato@walcenter.com.br</p>
+          <p>CNPJ: 00.000.000/0001-00</p>
+          <p>Rua Exemplo, 123 - Bonsucesso - Rio de Janeiro/RJ</p>
+          <p>Telefone: (00) 0000-0000 | contato@walcenter.com.br</p>
         </div>
       </section>
-
       <section class="pedido-box">
         <strong>PEDIDO</strong>
         <span class="numero">000001</span>
-        <small>Data: 17/07/2026</small>
+        <small>Data: 18/07/2026</small>
       </section>
     </header>
 
@@ -30,12 +29,12 @@
       <div>
         <span class="rotulo">CLIENTE</span>
         <strong>FULANO LTDA</strong>
-        <p>CNPJ/CPF: 98.765.432/0001-01</p>
-        <p>Endereço: Rua do Fulano, 456 - Bairro - Cidade/UF</p>
+        <p>CNPJ/CPF: 00.000.000/0000-00</p>
+        <p>Endereço: Rua do Fulano, 456 - Ramos - Rio de Janeiro/RJ</p>
       </div>
       <div>
         <span class="rotulo">VENDEDOR</span>
-        <strong>Ciclano</strong>
+        <strong>Ciclano </strong>
         <p>Forma de pagamento: 30 dias</p>
         <p>Transporte: Próprio</p>
       </div>
@@ -45,131 +44,77 @@
       <table>
         <thead>
           <tr>
-            <th>Item</th>
-            <th>Código</th>
-            <th>Produto / Descrição</th>
-            <th>Qtd.</th>
-            <th>Un.</th>
-            <th>Valor unit.</th>
-            <th>Valor total</th>
+            <th>Item</th><th>Código</th><th>Foto</th><th>Produto / Descrição</th><th>Qtd.</th><th>Un.</th><th>Visualizar</th>
           </tr>
         </thead>
         <tbody id="itens">
           <tr>
-            <td>01</td>
-            <td>00001</td>
-            <td><strong>Abraçadeira D com cunha</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">01</td><td data-label="Código">00001</td>
+            <td data-label="Foto"><img src="img/item-01-1.webp" alt="Foto do item 01" class="foto-item abrir-galeria" data-images="img/item-01-1.webp" data-titulo="Abraçadeira D com cunha"></td>
+            <td data-label="Produto / Descrição"><strong>Abraçadeira D com cunha</strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">2</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-01-1.webp" data-titulo="Abraçadeira D com cunha">Clique para visualizar o item</button></td>
           </tr>
           <tr>
-            <td>02</td>
-            <td>00002</td>
-            <td><strong>Presilha Latão</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">02</td><td data-label="Código">00002</td>
+            <td data-label="Foto"><img src="img/item-02-1.jpg" alt="Foto do item 02" class="foto-item abrir-galeria" data-images="img/item-02-1.jpg, img/item-02-2.webp, img/item-02-3.webp" data-titulo="Presilha Latão"></td>
+            <td data-label="Produto / Descrição"><strong>Presilha Latão </strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">4</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-02-1.jpg, img/item-02-2.webp, img/item-02-3.webp"  data-titulo="Presilha Latão">Clique para visualizar o item</button></td>
           </tr>
           <tr>
-            <td>03</td>
-            <td>00003</td>
-            <td><strong>Módulo - Multi</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">03</td><td data-label="Código">00003</td>
+            <td data-label="Foto"><img src="img/item-03-1.webp" alt="Foto do item 03" class="foto-item abrir-galeria" data-images="img/item-03-1.webp" data-titulo="Módulo - Multi"></td>
+            <td data-label="Produto / Descrição"><strong>Módulo - Multi </strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">10</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-03-1.webp" data-titulo="Módulo - Multi">Clique para visualizar o item</button></td>
           </tr>
           <tr>
-            <td>04</td>
-            <td>00004</td>
-            <td><strong>Conjunto de tomada - Multi</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">04</td><td data-label="Código">00004</td>
+            <td data-label="Foto"><img src="img/item-04-1.png" alt="Foto do item 04" class="foto-item abrir-galeria" data-images="img/item-04-1.png" data-titulo="Conjunto de tomada - Multi"></td>
+            <td data-label="Produto / Descrição"><strong>Conjunto de tomada - Multi</strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">6</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-04-1.png" data-titulo="Conjunto de tomada">Clique para visualizar o item</button></td>
           </tr>
           <tr>
-            <td>05</td>
-            <td>00005</td>
-            <td><strong>Caixa de luz octogonal</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">05</td><td data-label="Código">00005</td>
+            <td data-label="Foto"><img src="img/item-05-1.jpg" alt="Foto do item 05" class="foto-item abrir-galeria" data-images="img/item-05-1.jpg" data-titulo="Caixa de luz octogonal"></td>
+            <td data-label="Produto / Descrição"><strong>Caixa de luz octogonal</strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">12</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-05-1.jpg" data-titulo="Caixa de luz octogonal">Clique para visualizar o item</button></td>
           </tr>
           <tr>
-            <td>06</td>
-            <td>00006</td>
-            <td><strong>Cabo flexível - Multi</strong><br><small>Descrição ou Detalhes</small></td>
-            <td>2</td>
-            <td>UN</td>
-            <td>R$ 9,99</td>
-            <td>R$ 19,98</td>
+            <td data-label="Item">06</td><td data-label="Código">00006</td>
+            <td data-label="Foto"><img src="img/item-06-1.webp" alt="Foto do item 06" class="foto-item abrir-galeria" data-images="img/item-06-1.webp" data-titulo="Cabo flexível - Multi"></td>
+            <td data-label="Produto / Descrição"><strong>Cabo flexível - Multi</strong><br><small>Descrição ou Detalhes</small></td>
+            <td data-label="Quantidade">8</td><td data-label="Unidade">UN</td>
+            <td data-label="Visualizar"><button type="button" class="botao-visualizar abrir-galeria" data-images="img/item-06-1.webp" data-titulo="Cabo flexível - Multi">Clique para visualizar o item</button></td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <section class="resumo">
-      <div class="observacoes">
-        <span class="rotulo">OBSERVAÇÕES</span>
-        <p>Documento de Teste.</p>
-        <p>Prazo de entrega estimado: X dias úteis.</p>
-      </div>
-      <div class="totais">
-        <div><span>Subtotal</span><strong>R$ 119,88</strong></div>
-        <div><span>Frete</span><strong>R$ 0,00</strong></div>
-        <div class="total-geral"><span>Total geral</span><strong>R$ 119,88</strong></div>
-      </div>
+    <section class="observacoes">
+      <span class="rotulo">OBSERVAÇÕES</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <p>Prazo de entrega estimado: 5 dias úteis.</p>
     </section>
 
-    <section class="galeria">
-      <div class="galeria-titulo">
-        <div>
-          <span class="rotulo">IMAGENS DOS PRODUTOS</span>
-          <h2>Galeria</h2>
-        </div>
-        <div class="controles">
-          <button id="anterior" aria-label="Imagem anterior">&#10094;</button>
-          <button id="proximo" aria-label="Próxima imagem">&#10095;</button>
-        </div>
-      </div>
-
-      <div class="carrossel" id="carrossel">
-        <article class="slide">
-          <img src="img/produto-1.webp" alt="Produto 1" onerror="this.src='https://placehold.co/800x500?text=Produto+1'">
-          <p>Abraçadeira D com cunha </p>
-        </article>
-        <article class="slide">
-          <img src="img/produto-2.jpg" alt="Produto 2" onerror="this.src='https://placehold.co/800x500?text=Produto+2'">
-          <p>Presilha Latão</p>
-        </article>
-        <article class="slide">
-          <img src="img/produto-3.webp" alt="Produto 3" onerror="this.src='https://placehold.co/800x500?text=Produto+3'">
-          <p>Módulo - Multi</p>
-        </article>
-        <article class="slide">
-          <img src="img/produto-4.png" alt="Produto 4" onerror="this.src='https://placehold.co/800x500?text=Produto+4'">
-          <p>Conjunto de tomada - Multi</p>
-        </article>
-        <article class="slide">
-          <img src="img/produto-5.jpg" alt="Produto 5" onerror="this.src='https://placehold.co/800x500?text=Produto+5'">
-          <p>Caixa de luz octogonal</p>
-        </article>
-        <article class="slide">
-          <img src="img/produto-6.webp" alt="Produto 6" onerror="this.src='https://placehold.co/800x500?text=Produto+6'">
-          <p>Cabo flexível - Multi</p>
-        </article>
-      </div>
-    </section>
-
-    <footer>
-      Teste de Nota
-    </footer>
+    <footer>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus leo dui, in tincidunt tellus tristique ut.</footer>
   </main>
+
+  <div class="modal-galeria" id="modalGaleria" aria-hidden="true">
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="tituloGaleria">
+      <button type="button" class="fechar-modal" id="fecharModal" aria-label="Fechar">&times;</button>
+      <h2 id="tituloGaleria">Imagens do item</h2>
+      <div class="imagem-modal-container">
+        <button type="button" class="navegacao-modal" id="imagemAnterior" aria-label="Imagem anterior">&#10094;</button>
+        <img id="imagemModal" src="" alt="Imagem ampliada do produto">
+        <button type="button" class="navegacao-modal" id="imagemProxima" aria-label="Próxima imagem">&#10095;</button>
+      </div>
+      <p id="contadorImagens"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
